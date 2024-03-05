@@ -1,6 +1,0 @@
-require(RIdeogram)
-argv<-commandArgs(TRUE)
-karyotype <- read.table(argv[1], sep = "\t", header = T, stringsAsFactors = F)
-data <- read.table(argv[2], sep = "\t", header = T, stringsAsFactors = F)
-ideogram(karyotype = karyotype, overlaid = data, colorset1=c("#0000CD",	"#4169E1","#0000FF"),Lx = 0 ,Ly = 0)
-convertSVG("chromosome.svg",file=argv[3],device = "pdf")
